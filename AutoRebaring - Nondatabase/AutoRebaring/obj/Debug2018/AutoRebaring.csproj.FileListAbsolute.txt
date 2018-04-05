@@ -43,3 +43,21 @@ D:\1. Work\Code Project\1. Revit Addin\AutoRebaring\AutoRebaring - Nondatabase\A
 D:\1. Work\Code Project\1. Revit Addin\AutoRebaring\AutoRebaring - Nondatabase\AutoRebaring\obj\Debug2018\AutoRebaring.csproj.GenerateResource.Cache
 D:\1. Work\Code Project\1. Revit Addin\AutoRebaring\AutoRebaring - Nondatabase\AutoRebaring\obj\Debug2018\AutoRebaring.dll
 D:\1. Work\Code Project\1. Revit Addin\AutoRebaring\AutoRebaring - Nondatabase\AutoRebaring\obj\Debug2018\AutoRebaring.pdb
+D:\Git Hub\AutoRebaring-ColumnNDB\AutoRebaring - Nondatabase\AutoRebaring\bin\Debug2018\EntityFramework.SqlServer.xml
+D:\Git Hub\AutoRebaring-ColumnNDB\AutoRebaring - Nondatabase\AutoRebaring\bin\Debug2018\EntityFramework.xml
+D:\Git Hub\AutoRebaring-ColumnNDB\AutoRebaring - Nondatabase\AutoRebaring\bin\Debug2018\App.config
+D:\Git Hub\AutoRebaring-ColumnNDB\AutoRebaring - Nondatabase\AutoRebaring\bin\Debug2018\AutoRebaring.dll.config
+D:\Git Hub\AutoRebaring-ColumnNDB\AutoRebaring - Nondatabase\AutoRebaring\bin\Debug2018\AutoRebaring.dll
+D:\Git Hub\AutoRebaring-ColumnNDB\AutoRebaring - Nondatabase\AutoRebaring\bin\Debug2018\AutoRebaring.pdb
+D:\Git Hub\AutoRebaring-ColumnNDB\AutoRebaring - Nondatabase\AutoRebaring\bin\Debug2018\EntityFramework.dll
+D:\Git Hub\AutoRebaring-ColumnNDB\AutoRebaring - Nondatabase\AutoRebaring\bin\Debug2018\EntityFramework.SqlServer.dll
+D:\Git Hub\AutoRebaring-ColumnNDB\AutoRebaring - Nondatabase\AutoRebaring\obj\Debug2018\AutoRebaring.csprojResolveAssemblyReference.cache
+D:\Git Hub\AutoRebaring-ColumnNDB\AutoRebaring - Nondatabase\AutoRebaring\obj\Debug2018\Form\RebarInputForm.g.cs
+D:\Git Hub\AutoRebaring-ColumnNDB\AutoRebaring - Nondatabase\AutoRebaring\obj\Debug2018\AutoRebaring_MarkupCompile.cache
+D:\Git Hub\AutoRebaring-ColumnNDB\AutoRebaring - Nondatabase\AutoRebaring\obj\Debug2018\AutoRebaring_MarkupCompile.lref
+D:\Git Hub\AutoRebaring-ColumnNDB\AutoRebaring - Nondatabase\AutoRebaring\obj\Debug2018\Form\RebarInputForm.baml
+D:\Git Hub\AutoRebaring-ColumnNDB\AutoRebaring - Nondatabase\AutoRebaring\obj\Debug2018\AutoRebaring.g.resources
+D:\Git Hub\AutoRebaring-ColumnNDB\AutoRebaring - Nondatabase\AutoRebaring\obj\Debug2018\AutoRebaring.Properties.Resources.resources
+D:\Git Hub\AutoRebaring-ColumnNDB\AutoRebaring - Nondatabase\AutoRebaring\obj\Debug2018\AutoRebaring.csproj.GenerateResource.Cache
+D:\Git Hub\AutoRebaring-ColumnNDB\AutoRebaring - Nondatabase\AutoRebaring\obj\Debug2018\AutoRebaring.dll
+D:\Git Hub\AutoRebaring-ColumnNDB\AutoRebaring - Nondatabase\AutoRebaring\obj\Debug2018\AutoRebaring.pdb

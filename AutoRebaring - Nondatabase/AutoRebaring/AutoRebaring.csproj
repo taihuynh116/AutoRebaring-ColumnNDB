@@ -62,27 +62,27 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="2016_RevitAPI" Condition="'$(Configuration)' == 'Debug2016'">
-      <HintPath>D:\1. Work\Code Project\2. Reference\Revit 2016 dll\2016_RevitAPI.dll</HintPath>
+      <HintPath>T:\P.BIM\02_LIBRARY\R_C#\Reference\2016_RevitAPI.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="2016_RevitAPIUI" Condition="'$(Configuration)' == 'Debug2016'">
-      <HintPath>D:\1. Work\Code Project\2. Reference\Revit 2016 dll\2016_RevitAPIUI.dll</HintPath>
+      <HintPath>T:\P.BIM\02_LIBRARY\R_C#\Reference\2016_RevitAPIUI.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="2017_RevitAPI" Condition="'$(Configuration)' == 'Debug2017'">
-      <HintPath>D:\1. Work\Code Project\2. Reference\Revit 2017 dll\2017_RevitAPI.dll</HintPath>
+      <HintPath>T:\P.BIM\02_LIBRARY\R_C#\Reference\2017_RevitAPI.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="2017_RevitAPIUI" Condition="'$(Configuration)' == 'Debug2017'">
-      <HintPath>D:\1. Work\Code Project\2. Reference\Revit 2017 dll\2017_RevitAPIUI.dll</HintPath>
+      <HintPath>T:\P.BIM\02_LIBRARY\R_C#\Reference\2017_RevitAPIUI.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="2018_RevitAPI" Condition="'$(Configuration)' == 'Debug2018'">
-      <HintPath>D:\1. Work\Code Project\2. Reference\Revit 2018 dll\2018_RevitAPI.dll</HintPath>
+      <HintPath>T:\P.BIM\02_LIBRARY\R_C#\Reference\2018_RevitAPI.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="2018_RevitAPIUI" Condition="'$(Configuration)' == 'Debug2018'">
-      <HintPath>D:\1. Work\Code Project\2. Reference\Revit 2018 dll\2018_RevitAPIUI.dll</HintPath>
+      <HintPath>T:\P.BIM\02_LIBRARY\R_C#\Reference\2018_RevitAPIUI.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
@@ -196,7 +196,6 @@
     <Content Include="EntityFramework.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="NewRebarDetailing.addin" />
     <None Include="packages.config" />
     <None Include="Resources\AutoRebaring_32x32b.png" />
   </ItemGroup>

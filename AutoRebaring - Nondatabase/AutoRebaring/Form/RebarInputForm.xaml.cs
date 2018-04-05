@@ -443,26 +443,26 @@ namespace AutoRebaring.Form
             RatioLH = GeomUtil.DoubleParse(txtRatioLH.Text);
             CoverTopSmall = GeomUtil.DoubleParse(txtCoverTopSmall.Text);
 
-            var gpi = new GeneralParameterInput()
-            {
-                ProjectID = ProjectID,
-                ConcreteCover = ConcreteCover,
-                DevelopmentMultiply = DevelopmenMultiply,
-                DevelopmentLengthsDistance = DevelopmentLenghtDistance,
-                ReinforcementStirrupInclude = ReinforceStirrupInclue,
-                DeltaDevelopmentError = DeltaDevelopmentError,
-                NumberDevelopmentError = NumberDevelopmentError,
-                DevelopmentErrorInclude = DevelopErrorInclude,
-                DevelopmentLevelOffsetAllowed = DevelopLevelOffsetAllowed,
-                DevelopmentLevelOffsetInclude = DevelopLevelOffsetInclude,
-                ShortenLimit = ShortenLimit,
-                AnchorMultiply = AnchorMultiply,
-                LockheadMultiply = LockHeadMutliply,
-                ConcreteTopCover = ConcreteTopCover,
-                RatioLH = RatioLH,
-                CoverTopSmall = CoverTopSmall
-            };
-            new GeneralParameterInputDao().Update(gpi);
+            //var gpi = new GeneralParameterInput()
+            //{
+            //    ProjectID = ProjectID,
+            //    ConcreteCover = ConcreteCover,
+            //    DevelopmentMultiply = DevelopmenMultiply,
+            //    DevelopmentLengthsDistance = DevelopmentLenghtDistance,
+            //    ReinforcementStirrupInclude = ReinforceStirrupInclue,
+            //    DeltaDevelopmentError = DeltaDevelopmentError,
+            //    NumberDevelopmentError = NumberDevelopmentError,
+            //    DevelopmentErrorInclude = DevelopErrorInclude,
+            //    DevelopmentLevelOffsetAllowed = DevelopLevelOffsetAllowed,
+            //    DevelopmentLevelOffsetInclude = DevelopLevelOffsetInclude,
+            //    ShortenLimit = ShortenLimit,
+            //    AnchorMultiply = AnchorMultiply,
+            //    LockheadMultiply = LockHeadMutliply,
+            //    ConcreteTopCover = ConcreteTopCover,
+            //    RatioLH = RatioLH,
+            //    CoverTopSmall = CoverTopSmall
+            //};
+            //new GeneralParameterInputDao().Update(gpi);
         }
         private void SetDevelopmentRebar()
         {
