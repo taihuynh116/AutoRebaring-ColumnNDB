@@ -1,0 +1,38 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.26430.14
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AutoRebaring", "AutoRebaring\AutoRebaring.csproj", "{68C4E4FF-87FF-4701-86DC-BCDEF600A641}"
+EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "AutoRebaring_2018", "AutoRebaring_2018\AutoRebaring_2018.vdproj", "{75280A46-53C7-4ED2-BA28-1A48ADB9399D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug2016|Any CPU = Debug2016|Any CPU
+		Debug2017|Any CPU = Debug2017|Any CPU
+		Debug2018|Any CPU = Debug2018|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{68C4E4FF-87FF-4701-86DC-BCDEF600A641}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{68C4E4FF-87FF-4701-86DC-BCDEF600A641}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{68C4E4FF-87FF-4701-86DC-BCDEF600A641}.Debug2016|Any CPU.ActiveCfg = Debug2016|Any CPU
+		{68C4E4FF-87FF-4701-86DC-BCDEF600A641}.Debug2016|Any CPU.Build.0 = Debug2016|Any CPU
+		{68C4E4FF-87FF-4701-86DC-BCDEF600A641}.Debug2017|Any CPU.ActiveCfg = Debug2017|Any CPU
+		{68C4E4FF-87FF-4701-86DC-BCDEF600A641}.Debug2017|Any CPU.Build.0 = Debug2017|Any CPU
+		{68C4E4FF-87FF-4701-86DC-BCDEF600A641}.Debug2018|Any CPU.ActiveCfg = Debug2018|Any CPU
+		{68C4E4FF-87FF-4701-86DC-BCDEF600A641}.Debug2018|Any CPU.Build.0 = Debug2018|Any CPU
+		{68C4E4FF-87FF-4701-86DC-BCDEF600A641}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{68C4E4FF-87FF-4701-86DC-BCDEF600A641}.Release|Any CPU.Build.0 = Release|Any CPU
+		{75280A46-53C7-4ED2-BA28-1A48ADB9399D}.Debug|Any CPU.ActiveCfg = Debug
+		{75280A46-53C7-4ED2-BA28-1A48ADB9399D}.Debug2016|Any CPU.ActiveCfg = Debug2016
+		{75280A46-53C7-4ED2-BA28-1A48ADB9399D}.Debug2017|Any CPU.ActiveCfg = Debug
+		{75280A46-53C7-4ED2-BA28-1A48ADB9399D}.Debug2018|Any CPU.ActiveCfg = Debug
+		{75280A46-53C7-4ED2-BA28-1A48ADB9399D}.Release|Any CPU.ActiveCfg = Release
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

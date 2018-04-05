@@ -1,0 +1,5 @@
+D:\1. Work\Code Project\1. Revit Addin\AutoRebaring\AutoRebaring\AutoRebaring\bin\Debug\AutoRebaring.dll
+D:\1. Work\Code Project\1. Revit Addin\AutoRebaring\AutoRebaring\AutoRebaring\bin\Debug\AutoRebaring.pdb
+D:\1. Work\Code Project\1. Revit Addin\AutoRebaring\AutoRebaring\AutoRebaring\obj\Debug\AutoRebaring.dll
+D:\1. Work\Code Project\1. Revit Addin\AutoRebaring\AutoRebaring\AutoRebaring\obj\Debug\AutoRebaring.pdb
+D:\1. Work\Code Project\1. Revit Addin\AutoRebaring\AutoRebaring\AutoRebaring\obj\Debug\AutoRebaring.csprojResolveAssemblyReference.cache

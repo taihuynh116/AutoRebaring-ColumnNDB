@@ -1,0 +1,236 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{68C4E4FF-87FF-4701-86DC-BCDEF600A641}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>AutoRebaring</RootNamespace>
+    <AssemblyName>AutoRebaring</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>TRACE;DEBUG</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <StartAction>Program</StartAction>
+    <StartProgram>$(ProgramW6432)\Autodesk\Revit 2017\Revit.exe</StartProgram>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <StartAction>Program</StartAction>
+    <StartProgram>$(ProgramW6432)\Autodesk\Revit 2017\Revit.exe</StartProgram>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug2017|AnyCPU'">
+    <OutputPath>bin\Debug2017\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;Debug2017</DefineConstants>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <Optimize>false</Optimize>
+    <DebugType>full</DebugType>
+    <DebugSymbols>true</DebugSymbols>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug2018|AnyCPU'">
+    <OutputPath>bin\Debug2018\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;Debug2018</DefineConstants>
+    <Optimize>false</Optimize>
+    <DebugType>full</DebugType>
+    <DebugSymbols>true</DebugSymbols>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug2016|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\Debug2016\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;Debug2016</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="2016_RevitAPI" Condition="'$(Configuration)' == 'Debug2016'">
+      <HintPath>D:\1. Work\Code Project\2. Reference\Revit 2016 dll\2016_RevitAPI.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="2016_RevitAPIUI" Condition="'$(Configuration)' == 'Debug2016'">
+      <HintPath>D:\1. Work\Code Project\2. Reference\Revit 2016 dll\2016_RevitAPIUI.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="2017_RevitAPI" Condition="'$(Configuration)' == 'Debug2017'">
+      <HintPath>D:\1. Work\Code Project\2. Reference\Revit 2017 dll\2017_RevitAPI.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="2017_RevitAPIUI" Condition="'$(Configuration)' == 'Debug2017'">
+      <HintPath>D:\1. Work\Code Project\2. Reference\Revit 2017 dll\2017_RevitAPIUI.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="2018_RevitAPI" Condition="'$(Configuration)' == 'Debug2018'">
+      <HintPath>D:\1. Work\Code Project\2. Reference\Revit 2018 dll\2018_RevitAPI.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="2018_RevitAPIUI" Condition="'$(Configuration)' == 'Debug2018'">
+      <HintPath>D:\1. Work\Code Project\2. Reference\Revit 2018 dll\2018_RevitAPIUI.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="EnvDTE, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <HintPath>C:\Program Files (x86)\Microsoft Visual Studio 10.0\Common7\IDE\PublicAssemblies\EnvDTE.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Data">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App.cs" />
+    <Compile Include="Command.cs" />
+    <Compile Include="Database\AutoRebaring\AluformSchedule.cs" />
+    <Compile Include="Database\AutoRebaring\AutoRebaringDbContext.cs" />
+    <Compile Include="Database\AutoRebaring\ColumnParameter.cs" />
+    <Compile Include="Database\AutoRebaring\Dao\ColumnParameterDao.cs" />
+    <Compile Include="Database\AutoRebaring\Dao\DevelopmentRebarDao.cs" />
+    <Compile Include="Database\AutoRebaring\Dao\GeneralParameterInputDao.cs" />
+    <Compile Include="Database\AutoRebaring\Dao\LevelTitleDao.cs" />
+    <Compile Include="Database\AutoRebaring\Dao\MarkDao.cs" />
+    <Compile Include="Database\AutoRebaring\Dao\OtherParameterDao.cs" />
+    <Compile Include="Database\AutoRebaring\Dao\RebarChosenDao.cs" />
+    <Compile Include="Database\AutoRebaring\Dao\RebarChosenGeneralDao.cs" />
+    <Compile Include="Database\AutoRebaring\Dao\RebarDesignDao.cs" />
+    <Compile Include="Database\AutoRebaring\Dao\RebarDesignGeneralDao.cs" />
+    <Compile Include="Database\AutoRebaring\Dao\UserManagementDao.cs" />
+    <Compile Include="Database\AutoRebaring\DevelopmentRebar.cs" />
+    <Compile Include="Database\AutoRebaring\GeneralParameterInput.cs" />
+    <Compile Include="Database\AutoRebaring\LevelTitle.cs" />
+    <Compile Include="Database\AutoRebaring\Mark.cs" />
+    <Compile Include="Database\AutoRebaring\OtherParameter.cs" />
+    <Compile Include="Database\AutoRebaring\ProductSource.cs" />
+    <Compile Include="Database\AutoRebaring\RebarChosen.cs" />
+    <Compile Include="Database\AutoRebaring\RebarChosenGeneral.cs" />
+    <Compile Include="Database\AutoRebaring\RebarDesign.cs" />
+    <Compile Include="Database\AutoRebaring\RebarDesignGeneral.cs" />
+    <Compile Include="Database\AutoRebaring\UserManagement.cs" />
+    <Compile Include="Database\BIM_PORTAL\BIM_PORTALDbContext.cs" />
+    <Compile Include="Database\BIM_PORTAL\Projects.cs" />
+    <Compile Include="Database\ComputerInfo.cs" />
+    <Compile Include="Database\ConstantValue.cs" />
+    <Compile Include="Database\Encrypting.cs" />
+    <Compile Include="Form\FormCommand.cs" />
+    <Compile Include="Form\RebarInputForm.xaml.cs">
+      <DependentUpon>RebarInputForm.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Form\WindowForm.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="RebarLogistic\ColumnDesignInfo.cs" />
+    <Compile Include="RebarLogistic\ColumnInfo.cs" />
+    <Compile Include="RebarLogistic\GeneralNote.cs" />
+    <Compile Include="RebarLogistic\ParameterRebar.cs" />
+    <Compile Include="RebarLogistic\RebarInfo.cs" />
+    <Compile Include="RebarLogistic\StirrupDistribution.cs" />
+    <Compile Include="RebarLogistic\Variable.cs" />
+    <Compile Include="T:\P.BIM\02_LIBRARY\R_C#\General\CheckGeometry.cs">
+      <Link>Geometry\CheckGeometry.cs</Link>
+    </Compile>
+    <Compile Include="T:\P.BIM\02_LIBRARY\R_C#\General\ElementGeometryInfo.cs">
+      <Link>Geometry\ElementGeometryInfo.cs</Link>
+    </Compile>
+    <Compile Include="T:\P.BIM\02_LIBRARY\R_C#\General\GeomUtil.cs">
+      <Link>Geometry\GeomUtil.cs</Link>
+    </Compile>
+    <Compile Include="T:\P.BIM\02_LIBRARY\R_C#\General\MultiPolygon.cs">
+      <Link>Geometry\MultiPolygon.cs</Link>
+    </Compile>
+    <Compile Include="T:\P.BIM\02_LIBRARY\R_C#\General\ParameterUtil.cs">
+      <Link>Geometry\ParameterUtil.cs</Link>
+    </Compile>
+    <Compile Include="T:\P.BIM\02_LIBRARY\R_C#\General\Polygon.cs">
+      <Link>Geometry\Polygon.cs</Link>
+    </Compile>
+    <Compile Include="T:\P.BIM\02_LIBRARY\R_C#\General\SelectionFilter.cs">
+      <Link>Geometry\SelectionFilter.cs</Link>
+    </Compile>
+    <Compile Include="RebarLogistic\Turn.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="AutoRebaring.addin">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="EntityFramework.SqlServer.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="EntityFramework.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="NewRebarDetailing.addin" />
+    <None Include="packages.config" />
+    <None Include="Resources\AutoRebaring_32x32b.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="Form\RebarInputForm.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>REM copy "$(ProjectDir)*.addin" "$(AppData)\Autodesk\REVIT\Addins\2017"
+REM copy "$(ProjectDir)bin\debug\*.dll" "$(AppData)\Autodesk\REVIT\Addins\2017"</PostBuildEvent>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <Target Name="AfterClean">
+    <Delete Files="$(AppData)\Autodesk\REVIT\Addins\2017\AutoRebaring.addin" />
+    <Delete Files="$(AppData)\Autodesk\REVIT\Addins\2017\AutoRebaring.dll" />
+  </Target>
+</Project>
