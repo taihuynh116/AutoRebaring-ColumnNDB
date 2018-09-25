@@ -913,6 +913,9 @@ namespace AutoRebaring.Form
             //    txtUserName.Text = user.WebUsername;
             //    txtPassword.Password = user.WebPassword;
             //}
+            txtUserName.Text = User.Default.Username;
+            txtPassword.Password = User.Default.Password;
+
             for (int i = 0; i < cbbProject.Items.Count; i++)
             {
                 if (ProjectName == (cbbProject.Items[i] as string))
@@ -937,6 +940,7 @@ namespace AutoRebaring.Form
             switch (res)
             {
                 case 0:
+                case 1:
                     if (!isFirstSetUserName)
                         MessageBox.Show("Tên đăng nhập, mật khẩu hoặc mã dự án không đúng; hoặc bạn không được phân quyền để vào dự án này!");
                     UserType = UserType.NonAuthorizated;
@@ -949,7 +953,7 @@ namespace AutoRebaring.Form
                     btnLogout.IsEnabled = false;
 
                     break;
-                case 1:
+                case 2:
                     //user = new UserManagement()
                     //{
                     //    ProjectID = ProjectID,
@@ -967,15 +971,15 @@ namespace AutoRebaring.Form
                     colParamGrb.Visibility = System.Windows.Visibility.Visible;
                     cbbB1.IsEnabled = false;
                     cbbB2.IsEnabled = false;
-                    btnCheckParams.IsEnabled = true;
 
                     cbbProject.IsEnabled = false;
                     txtUserName.IsEnabled = false;
                     txtPassword.IsEnabled = false;
                     btnCheckUser.IsEnabled = false;
                     btnLogout.IsEnabled = true;
+                    
                     break;
-                case 2:
+                case 3:
                     //user = new UserManagement()
                     //{
                     //    ProjectID = ProjectID,
@@ -993,16 +997,19 @@ namespace AutoRebaring.Form
                     colParamGrb.Visibility = System.Windows.Visibility.Visible;
                     cbbB1.IsEnabled = true;
                     cbbB2.IsEnabled = true;
-                    btnCheckParams.IsEnabled = true;
 
                     cbbProject.IsEnabled = false;
                     txtUserName.IsEnabled = false;
                     txtPassword.IsEnabled = false;
                     btnCheckUser.IsEnabled = false;
                     btnLogout.IsEnabled = true;
+
                     break;
             }
 
+            User.Default.Username = txtUserName.Text;
+            User.Default.Password = txtPassword.Password;
+            User.Default.Save();
             isFirstSetUserName = false;
             FirstCheckColumnParameter();
         }
@@ -1174,8 +1181,13 @@ namespace AutoRebaring.Form
             //var res = new ColumnParameterDao().GetColumnParameter(ProjectID);
             //if (res == null)
             //{
-                cbbB1.SelectedIndex = 0;
-                cbbB2.SelectedIndex = 1;
+            for (int i = 0; i < cbbB1.Items.Count; i++)
+            {
+                if (cbbB1.Items[i] as string == "b_cot")
+                    cbbB1.SelectedIndex = i;
+                if (cbbB2.Items[i] as string == "h_cot")
+                    cbbB2.SelectedIndex = i;
+            }
             //}
             //else
             //{
@@ -1187,8 +1199,6 @@ namespace AutoRebaring.Form
             //            cbbB2.SelectedIndex = i;
             //    }
             //}
-            if (cbbB1.SelectedIndex == -1) cbbB1.SelectedIndex = 0;
-            if (cbbB2.SelectedIndex == -1) cbbB2.SelectedIndex = 1;
 
             //var marks = new MarkDao().GetMarks(ProjectID);
             //if (marks.Count != 0)
@@ -1205,6 +1215,7 @@ namespace AutoRebaring.Form
             B1_Param = cbbB1.SelectedItem as string;
             B2_Param = cbbB2.SelectedItem as string;
             if (B1_Param == null || B2_Param == null) throw new Exception("Không tồn tại tham biến kích thước cột!");
+            cbbMark.Text = Element.LookupParameter("Mark").AsString();
             Mark = cbbMark.Text;
             //ColumnParameter colParam = new ColumnParameter()
             //{
@@ -1243,6 +1254,7 @@ namespace AutoRebaring.Form
         {
             chkDevErrorInclude.IsChecked = true; chkDevLevelOffInclude.IsChecked = true;
             chkDevErrorInclude.IsChecked = false; chkDevLevelOffInclude.IsChecked = false;
+
             //var genParamInput = new GeneralParameterInputDao().GetGeneralParameterInput(ProjectID);
             //if (genParamInput == null) return;
             //txtConcCover.Text = genParamInput.ConcreteCover.ToString();
@@ -1260,6 +1272,18 @@ namespace AutoRebaring.Form
 
             //chkDevErrorInclude.IsChecked = genParamInput.DevelopmentErrorInclude;
             //chkDevLevelOffInclude.IsChecked = genParamInput.DevelopmentLevelOffsetInclude;
+
+            txtConcCover.Text = "35";
+            txtDevMulti.Text = "40";
+            txtDevsDist.Text = "0";
+            chkReinfStirrInclude.IsChecked = true;
+            txtShortenLimit.Text = "100";
+            txtAncMulti.Text = "40";
+            txtLockHeadMulti.Text = "40";
+            txtConcTopCover.Text = "100";
+            txtRatioLH.Text = "10";
+            txtCoverTopSmall.Text = "50";
+
         }
         private void GetDevelopmentRebarInput()
         {
@@ -1284,6 +1308,13 @@ namespace AutoRebaring.Form
             //chkOffStir.IsChecked = devRebarInput.StirrupOffsetInclude;
             //chkOffRatio.IsChecked = devRebarInput.OffsetRatioInclude;
             //chkOffRatioStir.IsChecked = devRebarInput.StirrupOffsetRatioInclude;
+
+            chkOff.IsChecked = true;
+            txtTopOff.Text = "0";
+            txtBotOff.Text = "0";
+            chkOffRatioStir.IsChecked = true;
+            txtTopOffRatioStir.Text = "6";
+            txtBotOffRatioStir.Text = "6";
         }
         private void GetRebarChosenGeneral()
         {
@@ -1301,6 +1332,18 @@ namespace AutoRebaring.Form
             //    if (rs == rebarChosenGen.FamilyStirrup2)
             //        cbbFamilyStirrup2.SelectedIndex = i;
             //}
+
+            txtLmax.Text = "7800";
+            txtLmin.Text = "1900";
+            txtStep.Text = "100";
+            txtImplantLmax.Text = "3900";
+            for (int i = 0; i < cbbFamilyStirrup1.Items.Count; i++)
+            {
+                if ((cbbFamilyStirrup1.Items[i] as RebarShape).Name == "TD_01")
+                    cbbFamilyStirrup1.SelectedIndex = i;
+                if ((cbbFamilyStirrup2.Items[i] as RebarShape).Name == "TD_C_90-135")
+                    cbbFamilyStirrup2.SelectedIndex = i;
+            }
         }
         private void GetRebarChosens()
         {
@@ -1359,6 +1402,27 @@ namespace AutoRebaring.Form
             //{
             //    txtImplantPairLs[i].Text = "";
             //}
+
+            txtStandardL0.Text = "7800";
+            txtStandardL1.Text = "5850";
+            txtStandardL2.Text = "3900";
+            txtStandardL3.Text = "2925";
+            txtStandardL4.Text = "2340";
+
+            txtStandardPairL0.Text = "11700";
+            txtStandardPairL1.Text = "7800";
+            txtStandardPairL2.Text = "5850";
+
+            txtStandardTripL0.Text = "11700";
+            txtStandardTripL1.Text = "7800";
+
+            txtImplantL0.Text = "3900";
+            txtImplantL1.Text = "2925";
+            txtImplantL2.Text = "2340";
+            txtImplantL3.Text = "1950";
+
+            txtImplantPairL0.Text = "5850";
+            txtImplantPairL1.Text = "3900";
         }
         private void GetLevelTitles()
         {
@@ -1376,6 +1440,24 @@ namespace AutoRebaring.Form
             //        }
             //    }
             //}
+
+            txtMetaLevels[0].Text = "H2";
+            txtMetaLevels[1].Text = "H1";
+            txtMetaLevels[2].Text = "00";
+            txtMetaLevels[3].Text = "T1";
+            txtMetaLevels[4].Text = "T2";
+            txtMetaLevels[5].Text = "T3";
+            txtMetaLevels[6].Text = "T4";
+            txtMetaLevels[7].Text = "T5";
+            txtMetaLevels[8].Text = "T6";
+            txtMetaLevels[9].Text = "T7";
+            txtMetaLevels[10].Text = "T8";
+            txtMetaLevels[11].Text = "T9";
+            txtMetaLevels[12].Text = "T10";
+            txtMetaLevels[13].Text = "T11";
+            txtMetaLevels[14].Text = "T12";
+            txtMetaLevels[15].Text = "TUM";
+            txtMetaLevels[16].Text = "MAI";
         }
         private void GetOtherParameters()
         {
@@ -1404,6 +1486,20 @@ namespace AutoRebaring.Form
             //    }
             //}
             //txtPartCount.Text = dao.PartCount.ToString();
+
+            for (int i = 0; i < Levels.Count; i++)
+            {
+                if (Levels[i].Id == Element.LevelId)
+                {
+                    cbbCheckLevel.SelectedIndex = i;
+                    break;
+                }
+            }
+
+            ElementType eType = Document.GetElement(Element.GetTypeId()) as ElementType;
+
+            lblCheckb1.Content = GeomUtil.feet2Milimeter(eType.LookupParameter("b_cot").AsDouble());
+            lblCheckb2.Content = GeomUtil.feet2Milimeter(eType.LookupParameter("h_cot").AsDouble());
         }
         private void GetRebarDesignGeneral()
         {
@@ -1424,6 +1520,8 @@ namespace AutoRebaring.Form
             //txtRebarOff2.Text = dao.RebarStartZ2.ToString();
             //rbtLockHead.IsChecked = dao.IsLockHead;
             //rbtStartRebar.IsChecked = dao.IsStartRebar;
+
+            cbbEndLevel.SelectedIndex = Levels.Count - 1;
         }
         private void GetRebarDesigns()
         {

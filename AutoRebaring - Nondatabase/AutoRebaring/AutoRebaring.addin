@@ -1,11 +1,19 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <RevitAddIns>
+  <AddIn Type="Command">
+    <Name>AutoRebaring (Column)</Name>
+    <Assembly>AutoRebaring\AutoRebaring.dll</Assembly>
+    <FullClassName>AutoRebaring.Form.FormCommand</FullClassName>
+    <ClientId>29c3b49c-d0ce-4725-8d74-79827f39100f</ClientId>
+    <VendorId>Huỳnh Thiện Tài</VendorId>
+    <VendorDescription>Phong BIM, Hoa Binh Corporation</VendorDescription>
+  </AddIn>
   <AddIn Type="Application">
     <Name>AutoRebaring (Column)</Name>
     <Assembly>AutoRebaring\AutoRebaring.dll</Assembly>
     <FullClassName>AutoRebaring.App</FullClassName>
-    <ClientId>29c3b49c-d0ce-4725-8d74-79827f39100f</ClientId>
-    <VendorId>http://vietbimcoder.com</VendorId>
-    <VendorDescription>Huỳnh Thiện Tài, http://vietbimcoder.com</VendorDescription>
+    <ClientId>2c3a02fa-037c-425b-aab4-77ce07583ddf</ClientId>
+    <VendorId>Huỳnh Thiện Tài</VendorId>
+    <VendorDescription>Phong BIM, Hoa Binh Corporation</VendorDescription>
   </AddIn>
 </RevitAddIns>

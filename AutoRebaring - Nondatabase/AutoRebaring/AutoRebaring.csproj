@@ -185,6 +185,11 @@
       <Link>Geometry\SelectionFilter.cs</Link>
     </Compile>
     <Compile Include="RebarLogistic\Turn.cs" />
+    <Compile Include="User.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>User.settings</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Content Include="AutoRebaring.addin">
@@ -198,6 +203,10 @@
     </Content>
     <None Include="packages.config" />
     <None Include="Resources\AutoRebaring_32x32b.png" />
+    <None Include="User.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>User.Designer.cs</LastGenOutput>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <Page Include="Form\RebarInputForm.xaml">

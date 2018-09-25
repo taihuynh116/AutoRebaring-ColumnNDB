@@ -130,7 +130,7 @@ namespace AutoRebaring.RebarLogistic
             {
                 double d = 0;
                 if (GeneralNote.IsOffsetCheckStirrup) d = GeneralNote.BottomOffsetStirrup;
-                if (GeneralNote.IsOffsetRatioCheckStirrup) d = Math.Max(d, ((GeneralNote.IsStirrupInsideBeam ? TopFloor : Top) - Bottom) / GeneralNote.BottomOffsetRatioStirrup);
+                if (GeneralNote.IsOffsetRatioCheckStirrup) d = Math.Max(Math.Max(B1, B2), Math.Max(d, ((GeneralNote.IsStirrupInsideBeam ? TopFloor : Top) - Bottom) / GeneralNote.BottomOffsetRatioStirrup));
                 return d;
             }
         }
@@ -140,7 +140,7 @@ namespace AutoRebaring.RebarLogistic
             {
                 double d = 0;
                 if (GeneralNote.IsOffsetCheckStirrup) d = GeneralNote.TopOffsetStirrup;
-                if (GeneralNote.IsOffsetRatioCheckStirrup) d = Math.Max(d, ((GeneralNote.IsStirrupInsideBeam ? TopFloor : Top) - Bottom) / GeneralNote.TopOffsetRatioStirrup);
+                if (GeneralNote.IsOffsetRatioCheckStirrup) d = Math.Max(Math.Max(B1, B2), Math.Max(d, ((GeneralNote.IsStirrupInsideBeam ? TopFloor : Top) - Bottom) / GeneralNote.TopOffsetRatioStirrup));
                 return d;
             }
         }

@@ -47,7 +47,6 @@
                                     <ComboBox x:Name="cbbMark" IsEditable="True" Width="74" HorizontalAlignment="Left" Height="22" Margin="0,0,0,0" Text="" VerticalAlignment="Center" />
                                 </StackPanel>
                             </StackPanel>
-                            <Button x:Name="btnCheckParams" Content="OK" HorizontalAlignment="Left" Margin="27,0,0,11" VerticalAlignment="Bottom" Width="43" Click="btnCheckParams_Click"/>
                         </StackPanel>
                     </GroupBox>
                 </StackPanel>
